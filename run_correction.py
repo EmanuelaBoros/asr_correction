@@ -351,6 +351,8 @@ def main():
     df = pd.read_csv('data/train.csv')
     df = df.dropna()
     
+    import pdb;pdb.set_trace()
+    
     dataset = ds.dataset(pa.Table.from_pandas(df).to_batches())
     train_dataset = Dataset(pa.Table.from_pandas(df))
     
